@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: hsl(217, 54%, 11%);
+    overflow: hidden;
+
+}
+
+.container{
+    display: flex;
+    max-width: 30%;
+    min-width: 350px;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.7);
+    border-radius: 12px;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.content .img-container{
+    width: 100%;
+    position: relative;
+}
+.content .img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+cursor: pointer;
+}
+
+.img-container:hover{
+    filter: hue-rotate(45deg);
+}
+
+
+.content .img-container::before{
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+}
+
+.img-container:hover::before{
+    opacity: 1;
+}
+
+
+
+
+.text h3{
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+} 
+
+.text h3:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+
+}
+
+.text p{
+    color: #898989;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.price{
+    display: flex;
+   justify-content: space-between;
+}
+.price p{
+    margin-bottom: 30px;
+}
+
+
+.price p:first-child{
+    color:  hsl(178, 100%, 50%);
+}
+
+.price p:last-child{
+    color:  hsl(215, 51%, 70%);
+    font-size: 14px;
+}
+
+.content .line{
+    width: 100%;
+    border-bottom: 1px solid #878787;
+    margin-bottom: 20px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer img{
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+
+}
+
+.footer p{
+    color: #908f8f;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+.footer p span{
+    font-weight: 500;
+    color: #fff;
+    font-size: 14px;
+}
+
+p span:hover{
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
